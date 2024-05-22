@@ -1,5 +1,5 @@
-name: solution-pattern-template
-title: Template Tutorial
+name: solution-pattern-predict-stock-price-trend-using-rhoai
+title: Predict stock price trend using Red Hat Openshift AI
 version: master
 nav:
   - modules/ROOT/nav.adoc

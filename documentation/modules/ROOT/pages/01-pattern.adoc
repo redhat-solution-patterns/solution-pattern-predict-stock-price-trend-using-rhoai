@@ -1,7 +1,36 @@
 == The story behind this solution pattern
 
-A description of the story that was used to build the demo and architectures of this SP.
+Artificial Intelligence:
+Turn an Organization’s data into a valuable business asset and a competitive advantage. Artificial intelligence (AI) and machine learning (ML) technologies employ data to deliver business insight, automate tasks, and advance system capabilities. These technologies can help an organization transform all aspects of their business to achieve measurable business outcomes like improving customer satisfaction and becoming more competitive.
+
+Red Hat OpenShift Data Science is an open source machine learning (ML) platform for the hybrid cloud. By providing a fully supported environment to establish MLOps best practices, data scientists and developers can rapidly train, deploy and monitor ML workloads and models on-premise and in the public cloud.
+
+Red Hat OpenShift AI is an AI-focused portfolio that provides tools across the full lifecycle of AI/ML experiments and models and includes Red Hat OpenShift Data Science.
+
+image::rhoai_img.png[width=100%]
+
+= Platform for running AI workloads:
+
+Kubernetes is an open-source container orchestration engine for automating deployment, scaling and management of containerized applications. It is being used heavily for production grade applications. Kubernetes clusters are being created and used in public and private clouds. Managed Kubernetes clusters(EKS, AKS, GKE) in hyperscalers provide different integration toolsets, different dev experience (beyond kubectl), different life-cycles, different technologies (OS, kube version, mesh options), and so on. All public clouds provide their own different:
+
+- Development tools.
+- Infrastructure and application deployment approaches.
+- Networking/topologies.
+- Security configuration and compliance.
+- Training and certification.
+
+Each Organization’s goals should be:
+
+- Reduce infrastructure complexity by abstracting it.
+- Get a consistent platform on any cloud infrastructure.
+- Use a SRE managed application platform.
+- Consistency - reduce developer and operations overhead.
+- Turnkey - avoid over-investing in your own platform engineering.
+- Take advantage of strong cloud partnerships through Red Hat.
+
+Red Hat has a premium managed OpenShift offering in the key hyperscalers such as AWS i.e. ROSA, Azure & GCP. In this pattern, we will be demonstrating how we can utilize RHODS on ROSA for the deployment of machine learning models using data science pipelines and how we can set up these pipelines.
+
 
 == The Solution
 
-This is a summary of the solution
+This solution pattern demonstrates how we can build, train and deploy machine learning model using Red Hat OpenShift AI. We will consume the model via REST endpoint through a python application deployed in OpenShift.

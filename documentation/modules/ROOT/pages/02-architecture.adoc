@@ -1,104 +1,60 @@
-= Solution Pattern: Name Template
+= Solution Pattern: Predict stock price trend using Red Hat Openshift AI
 :sectnums:
 :sectlinks:
 :doctype: book
 
 = Architecture 
 
-Introduction for the architecture of this solution pattern.
-
-== Common Challenges 
-
 [#tech_stack]
 == Technology Stack
 
-// Change links and text here as you see fit.
-* Red Hat supported products
-** https://www.redhat.com/en/technologies/cloud-computing/openshift[Red Hat OpenShift]
-** Red Hat Application Foundation
-*** https://access.redhat.com/products/quarkus[Quarkus]
-*** https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-streams-for-apache-kafka[Kafka Streams]
-* Other open source products:
-** https://www.postgresql.org/[PostgreSQL database]
-** https://helm.sh/[Helm]
+=== What is Machine Learning
+Machine learning is a branch of Artificial Intelligence and computer science which           focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy. It is an approach to learn complex patterns from existing data and use these patterns to make predictions on unseen data.
+
+It is an important component of the growing field of data science. Through the use of statistical methods, algorithms are trained to make classifications or predictions, and to uncover key insights in data mining projects. These insights subsequently drive decision making within applications and businesses, ideally impacting key growth metrics. As big data continues to expand and grow, the market demand for data scientists will increase. They will be required to help identify the most relevant business questions and the data to answer them. Machine learning algorithms are typically created using frameworks that accelerate solution development, such as TensorFlow and PyTorch.
+
+=== What is RHOAI
+Red Hat OpenShift AI is a flexible, scalable MLOps platform with tools to build, deploy, and manage AI-enabled applications. Built using open source technologies, it provides trusted, operationally consistent capabilities for teams to experiment, serve models, and deliver innovative apps.
+
+OpenShift AI (previously called Red Hat OpenShift Data Science) supports the full lifecycle of AI/ML experiments and models, on-premise and in the public cloud.
+
+image::rhoai_img.png[width=100%]
+
+OpenShift AI offers organizations an efficient way to deploy an integrated set of common open source and third-party tools to perform AI/ML modeling. The platform represents an alternative to prescriptive and opinionated AI/ML suites available from individual cloud providers. Adopters gain a collaborative open source toolset and a platform for building experimental models without worrying about the infrastructure or lock-in from public cloud-specific tools. They can then extend that base platform with partner tools to gain increased capabilities. Models can be served to production environments in a container-ready format, consistently, across hybrid cloud and edge environments. OpenShift AI provides IT operations with an environment that is simple to manage, with straightforward configurations on a proven, scalable, and security-focused platform.
+
+OpenShift AI supports popular gen AI foundation models, letting you prompt-tune, fine tune, and serve these pretrained models for your unique use cases and with your own data. You can even distribute workloads across multiple Red Hat OpenShift clusters, independent of their location. The platform makes it simpler to exploit AI hardware acceleration too, supporting central processing unit (CPU) and graphic processing unit (GPU)-based hardware infrastructure including Nvidia GPUs and Intel XPUs—all without the need to stand up and manage your own data science platform. 
+
+=== What is Cloud Services OpenShift
+- More than Kubernetes: 
+
+Kubernetes is a powerful orchestration engine. OpenShift delivers a complete application development, deployment and runtime platform adding features such as build pipelines, monitoring, security, service mesh, etc on top of upstream Kubernetes.
+
+- More than Software:
+
+Leverage our self-service dashboard and out-of-the-box optimized configuration to get fully-managed clusters in minutes, configured to meet your needs and on your preferred public cloud.
+
+- More than “Managed”:
+
+Unlike other ‘managed’ services on the market, Red Hat manages the full stack not just the  Kubernetes control plane and is backed by the experience of our specialized 24x7 global SRE team.
+
+=== What are the benefits of Red Hat OpenShift Cloud Services
+Red Hat OpenShift Cloud Services reduce operational complexity allowing developers to focus on building and scaling applications that add more value to the business, go-to-market faster and get more from your cloud environment.
+
+- Faster time to value: Fully-managed clusters increase developer productivity. Developers focus on value-add applications.
+- Increase Operational Efficiencies: Fully-managed clusters increase infrastructure and daily operations efficiency.
+- 24X7 Expert Support: 24x7 full-stack management and support from industry leading SRE team.
+- Hybrid-Cloud Deployments offer Choice & Flexibility: Only company to offer managed Kubernetes on all major public clouds.
+
+image::cloudservices_img.png[width=100%]
 
 
 [#in_depth]
 == An in-depth look at the solution's architecture
 
-Technical description including all or some of the following: architecture ir ed diagrams. In-depth details of the decisions made and solutions used. Description of each service and what it is used for. Description of any integration.
+This solution pattern uses the following components:
 
-=== Using images 
+- GitHub Repository: It contains the application code, deployment code and jupyter notebooks.
+- Red Hat Openshift Service on AWS (ROSA): It is a fully-managed, turnkey application platform that allows you to focus on delivering value to your customers by building and deploying applications. Red Hat and AWS Site reliability engineering (SRE) experts manage the underlying platform so you do not have to worry about the complexity of infrastructure management. ROSA provides seamless integration with a wide range of AWS compute, database, analytics, machine learning, networking, mobile, and other services to further accelerate the building and delivering of differentiating experiences to your customers. We will be using ROSA to deploy our containerized application.
+- Red Hat Openshift AI: Red Hat OpenShift AI is a flexible, scalable MLOps platform with tools to build, deploy, and manage AI-enabled applications. Built using open source technologies, it provides trusted, operationally consistent capabilities for teams to experiment, serve models, and deliver innovative apps.
 
-image::red_hat_open-hybrid-cloud.png[width=30%]
-
-{empty}
-
-=== Embedding HTML
-
-++++
-  <br>
-  <h3> Embed HTML by surrounding it with with four +s before and after. </h3>
-  <span>View the ascii doc to learn more</span>
-  <br> 
-++++
-
-
-=== Different decorators
-
-[TIP]
-====
-This is a Tip
-====
-
-[NOTE]
-====
-This is a NOTE
-====
-
-[WARNING]
-====
-This is a WARNING
-====
-
-[IMPORTANT]
-====
-This is IMPORTANT
-====
-
-
-=== Creating  tables
- 
-[cols="1a,1a,1a"]
-|===
-| *Column A*  | Column *A* | _Column C_
-|
-* Lorem Ipsum
-* Lorem Ipsum
-
-|
-* Lorem Ipsum
-* Lorem Ipsum
-
-|
-* Lorem Ipsum
-* Lorem Ipsum
-|===
-
-
-
-=== Content that can be copied
-
-Click below to copy the content
-[.console-input]
-[source,shell script]
-----
-oc version #openshift cli client
-oc login --token=<token> --server=<server>
-----
-
-
-[#more_tech]
-== About the Technology Stack
-
-If you want to include more details about the tech stack you used, this is the place.
+image::rhoai_arch.png[width=100%]

@@ -1,4 +1,4 @@
-= Solution Patterns: Template Name
+= Solution Patterns: Predict stock price trend using Red Hat Openshift AI
 :sectnums:
 :sectlinks:
 :doctype: book

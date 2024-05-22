@@ -1,4 +1,4 @@
-= Solution Patterns: Predict stock price trend using Red Hat Openshift AI
+= Solution Patterns: Predict stock price trend using Red Hat OpenShift AI
 :page-layout: home
 :sectnums:
 :sectlinks:

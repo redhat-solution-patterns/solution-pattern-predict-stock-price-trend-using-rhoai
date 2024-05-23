@@ -1,5 +1,5 @@
 name: solution-pattern-predict-stock-price-trend-using-rhoai
-title: Predict stock price trend using Red Hat Openshift AI
+title: Predict stock price trend using Red Hat OpenShift AI
 version: master
 nav:
   - modules/ROOT/nav.adoc

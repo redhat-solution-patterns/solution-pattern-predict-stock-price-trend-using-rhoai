@@ -1,7 +1,7 @@
 == The story behind this solution pattern
 
 Artificial Intelligence:
-Turn an Organization’s data into a valuable business asset and a competitive advantage. Artificial intelligence (AI) and machine learning (ML) technologies employ data to deliver business insight, automate tasks, and advance system capabilities. These technologies can help an organization transform all aspects of their business to achieve measurable business outcomes like improving customer satisfaction and becoming more competitive.
+Turn an organization’s data into a valuable business asset and a competitive advantage. Artificial intelligence (AI) and machine learning (ML) technologies employ data to deliver business insight, automate tasks, and advance system capabilities. These technologies can help an organization transform all aspects of their business to achieve measurable business outcomes like improving customer satisfaction and becoming more competitive.
 
 Red Hat OpenShift Data Science is an open source machine learning (ML) platform for the hybrid cloud. By providing a fully supported environment to establish MLOps best practices, data scientists and developers can rapidly train, deploy and monitor ML workloads and models on-premise and in the public cloud.
 

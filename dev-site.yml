@@ -2,9 +2,11 @@ runtime:
   cache_dir: ./.cache/antora
 
 site:
-  title: Solution Patterns for Cloud Native Architectures  
+  title: Solution Patterns from Red Hat
   url: http://localhost:3000/
   start_page: solution-pattern-predict-stock-price-trend-using-rhoai::index.adoc
+  keys: 
+    google_analytics: G-07LDTN5F73
 
 content:
   sources:

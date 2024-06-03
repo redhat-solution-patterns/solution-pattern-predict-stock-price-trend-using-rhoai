@@ -5,6 +5,8 @@ site:
   title: Solution Patterns from Red Hat
   url: https://redhat-solution-patterns.github.io/solution-patterns/
   start_page: solution-pattern-predict-stock-price-trend-using-rhoai::index.adoc
+  keys: 
+    google_analytics: G-07LDTN5F73
 
 content:
   sources:

@@ -11,24 +11,9 @@ image::rhoai_img.png[width=100%]
 
 = Platform for running AI workloads:
 
-Kubernetes is an open-source container orchestration engine for automating deployment, scaling and management of containerized applications. It is being used heavily for production grade applications. Kubernetes clusters are being created and used in public and private clouds. Managed Kubernetes clusters(EKS, AKS, GKE) in hyperscalers provide different integration toolsets, different dev experience (beyond kubectl), different life-cycles, different technologies (OS, kube version, mesh options), and so on. All public clouds provide their own different:
+Red Hat OpenShift AI is an artificial intelligence (AI) platform that provides tools to rapidly develop, train, serve, and monitor machine learning models on site, in the public cloud, or at the edge.
 
-- Development tools.
-- Infrastructure and application deployment approaches.
-- Networking/topologies.
-- Security configuration and compliance.
-- Training and certification.
-
-Each Organization’s goals should be:
-
-- Reduce infrastructure complexity by abstracting it.
-- Get a consistent platform on any cloud infrastructure.
-- Use a SRE managed application platform.
-- Consistency - reduce developer and operations overhead.
-- Turnkey - avoid over-investing in your own platform engineering.
-- Take advantage of strong cloud partnerships through Red Hat.
-
-Red Hat has a premium managed OpenShift offering in the key hyperscalers such as AWS i.e. ROSA, Azure & GCP. In this pattern, we will be demonstrating how we can utilize RHODS on ROSA for the deployment of machine learning models using data science pipelines and how we can set up these pipelines.
+OpenShift AI[https://developers.redhat.com/products/red-hat-openshift-ai/overview^] gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.
 
 
 == The Solution

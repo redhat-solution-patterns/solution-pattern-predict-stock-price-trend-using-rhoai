@@ -1,10 +1,10 @@
-= Solution Patterns: Predict stock price trend using Red Hat OpenShift AI
+= Solution Patterns: Machine Learning and Data Science Pipelines using OpenShift AI
 :page-layout: home
 :sectnums:
 :sectlinks:
 :doctype: book
 
-This solution pattern brings an architectural solution demonstrating how one can use machine learning to predict stock price. In this solution pattern, we will show the deployment of machine learning model using data science pipelines and how we can set up these pipelines.
+This solution pattern brings an architectural solution demonstrating how one can use machine learning with an exmaple based on stock price prediction. In this solution pattern, we will show the deployment of machine learning model using data science pipelines and how we can set up these pipelines.
 
 *Contributors:* Gaurav Midha, Ritesh Shah
 

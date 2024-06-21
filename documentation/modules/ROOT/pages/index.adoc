@@ -4,7 +4,7 @@
 :sectlinks:
 :doctype: book
 
-This solution pattern brings an architectural solution demonstrating how one can use machine learning with an exmaple based on stock price prediction. In this solution pattern, we will show the deployment of machine learning model using data science pipelines and how we can set up these pipelines.
+This solution pattern brings an architectural solution demonstrating how one can use machine learning with an example based on stock price prediction. In this solution pattern, we will show the deployment of machine learning model using data science pipelines and how we can set up these pipelines.
 
 *Contributors:* Gaurav Midha, Ritesh Shah
 
@@ -22,7 +22,7 @@ Common use cases that can be address with this architecture are:
 
 - Build, train and deploy machine learning model using Red Hat OpenShift AI.
 - Use S3 backend storage for storing the model.
-- Create and run Data Science pipelines in Openshift. 
+- Create and run Data Science pipelines in OpenShift. 
 - Consume the model via REST endpoint through a python application deployed in OpenShift.
 
 include::01-pattern.adoc[]

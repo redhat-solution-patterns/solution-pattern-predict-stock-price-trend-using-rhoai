@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Solution Patterns: Predict stock price trend using Red Hat OpenShift AI :: Solution Patterns from Red Hat</title>
+    <title>Solution Patterns: Machine Learning and Data Science Pipelines using OpenShift AI :: Solution Patterns from Red Hat</title>
     <link rel="canonical" href="https://redhat-solution-patterns.github.io/solution-patterns/solution-pattern-predict-stock-price-trend-using-rhoai/index.html">
     <link rel="next" href="02-architecture.html">
     <meta name="generator" content="Antora 3.0.0">
@@ -153,11 +153,11 @@
   </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Solution Patterns: Predict stock price trend using Red Hat OpenShift AI</h1>
+<h1 class="page">Solution Patterns: Machine Learning and Data Science Pipelines using OpenShift AI</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This solution pattern brings an architectural solution demonstrating how one can use machine learning to predict stock price. In this solution pattern, we will show the deployment of machine learning model using data science pipelines and how we can set up these pipelines.</p>
+<p>This solution pattern brings an architectural solution demonstrating how one can use machine learning with an exmaple based on stock price prediction. In this solution pattern, we will show the deployment of machine learning model using data science pipelines and how we can set up these pipelines.</p>
 </div>
 <div class="paragraph">
 <p><strong>Contributors:</strong> Gaurav Midha, Ritesh Shah</p>
@@ -227,54 +227,10 @@ Turn an organization’s data into a valuable business asset and a competitive a
 <div class="openblock partintro">
 <div class="content">
 <div class="paragraph">
-<p>Kubernetes is an open-source container orchestration engine for automating deployment, scaling and management of containerized applications. It is being used heavily for production grade applications. Kubernetes clusters are being created and used in public and private clouds. Managed Kubernetes clusters(EKS, AKS, GKE) in hyperscalers provide different integration toolsets, different dev experience (beyond kubectl), different life-cycles, different technologies (OS, kube version, mesh options), and so on. All public clouds provide their own different:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Development tools.</p>
-</li>
-<li>
-<p>Infrastructure and application deployment approaches.</p>
-</li>
-<li>
-<p>Networking/topologies.</p>
-</li>
-<li>
-<p>Security configuration and compliance.</p>
-</li>
-<li>
-<p>Training and certification.</p>
-</li>
-</ul>
+<p>Red Hat OpenShift AI is an artificial intelligence (AI) platform that provides tools to rapidly develop, train, serve, and monitor machine learning models on site, in the public cloud, or at the edge.</p>
 </div>
 <div class="paragraph">
-<p>Each Organization’s goals should be:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Reduce infrastructure complexity by abstracting it.</p>
-</li>
-<li>
-<p>Get a consistent platform on any cloud infrastructure.</p>
-</li>
-<li>
-<p>Use a SRE managed application platform.</p>
-</li>
-<li>
-<p>Consistency - reduce developer and operations overhead.</p>
-</li>
-<li>
-<p>Turnkey - avoid over-investing in your own platform engineering.</p>
-</li>
-<li>
-<p>Take advantage of strong cloud partnerships through Red Hat.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Red Hat has a premium managed OpenShift offering in the key hyperscalers such as AWS i.e. ROSA, Azure &amp; GCP. In this pattern, we will be demonstrating how we can utilize RHODS on ROSA for the deployment of machine learning models using data science pipelines and how we can set up these pipelines.</p>
+<p>OpenShift AI[<a href="https://developers.redhat.com/products/red-hat-openshift-ai/overview^" class="bare">https://developers.redhat.com/products/red-hat-openshift-ai/overview^</a>] gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.</p>
 </div>
 </div>
 </div>

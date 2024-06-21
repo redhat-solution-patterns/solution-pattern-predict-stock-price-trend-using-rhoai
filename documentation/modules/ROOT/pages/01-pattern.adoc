@@ -13,7 +13,7 @@ image::rhoai_img.png[width=100%]
 
 Red Hat OpenShift AI is an artificial intelligence (AI) platform that provides tools to rapidly develop, train, serve, and monitor machine learning models on site, in the public cloud, or at the edge.
 
-OpenShift AI[https://developers.redhat.com/products/red-hat-openshift-ai/overview^] gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.
+https://developers.redhat.com/products/red-hat-openshift-ai/overview[OpenShift AI^] gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.
 
 
 == The Solution

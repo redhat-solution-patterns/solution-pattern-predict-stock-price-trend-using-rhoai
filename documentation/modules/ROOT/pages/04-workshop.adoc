@@ -7,7 +7,11 @@
 
 == Installing the workshop environment
 === Installing the environment
-Login to https://demo.redhat.com/catalog and create an OpenShift cluster with RHOAI and enable Open environment using either this https://demo.redhat.com/catalog?search=rhoai&item=babylon-catalog-prod%2Fsandboxes-gpte.ocp4-workshop-rhods-base-aws.prod[one] or https://demo.redhat.com/catalog?search=rhods&item=babylon-catalog-prod%2Fsandboxes-gpte.ocp4-wksp-base-rhods-on-rosa.prod[this] link.
+
+Note: This demo works well with RHOAI(channel = stable-2.8 and version <= 2.8.4). For newer version of RHOAI, we are working on upgrading this demo.
+
+Login to https://demo.redhat.com/catalog and provision a CI with OpenShift cluster and install OpenShift AI operator(stable-2.8 and version <= 2.8.4), during the operator install create DataScienceCluster with default values.
+Now install OpenShift Pipelines operator using the default values in the fields.
 
 == Delivering the workshop
 

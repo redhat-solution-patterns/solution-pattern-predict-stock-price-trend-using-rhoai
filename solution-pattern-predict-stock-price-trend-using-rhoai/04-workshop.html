@@ -161,7 +161,11 @@
 <div class="sect2">
 <h3 id="_installing_the_environment"><a class="anchor" href="#_installing_the_environment"></a><a class="link" href="#_installing_the_environment">1.1. Installing the environment</a></h3>
 <div class="paragraph">
-<p>Login to <a href="https://demo.redhat.com/catalog" class="bare">https://demo.redhat.com/catalog</a> and create an OpenShift cluster with RHOAI and enable Open environment using either this <a href="https://demo.redhat.com/catalog?search=rhoai&amp;item=babylon-catalog-prod%2Fsandboxes-gpte.ocp4-workshop-rhods-base-aws.prod">one</a> or <a href="https://demo.redhat.com/catalog?search=rhods&amp;item=babylon-catalog-prod%2Fsandboxes-gpte.ocp4-wksp-base-rhods-on-rosa.prod">this</a> link.</p>
+<p>Note: This demo works well with RHOAI(channel = stable-2.8 and version &#8656; 2.8.4). For newer version of RHOAI, we are working on upgrading this demo.</p>
+</div>
+<div class="paragraph">
+<p>Login to <a href="https://demo.redhat.com/catalog" class="bare">https://demo.redhat.com/catalog</a> and provision a CI with OpenShift cluster and install OpenShift AI operator(stable-2.8 and version &#8656; 2.8.4), during the operator install create DataScienceCluster with default values.
+Now install OpenShift Pipelines operator using the default values in the fields.</p>
 </div>
 </div>
 </div>

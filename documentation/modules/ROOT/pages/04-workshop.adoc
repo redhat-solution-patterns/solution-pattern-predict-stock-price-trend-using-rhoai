@@ -8,10 +8,24 @@
 == Installing the workshop environment
 === Installing the environment
 
-Note: This demo works well with RHOAI(channel = stable-2.8 and version <= 2.8.4). For newer version of RHOAI, we are working on upgrading this demo.
 
-Login to https://demo.redhat.com/catalog and provision a CI with OpenShift cluster and install OpenShift AI operator(stable-2.8 and version <= 2.8.4), during the operator install create DataScienceCluster with default values.
-Now install OpenShift Pipelines operator using the default values in the fields.
+Login to https://demo.redhat.com/catalog and provision a CI with OpenShift cluster using this https://demo.redhat.com/catalog?item=babylon-catalog-prod%2Fopenshift-cnv.ocpmulti-wksp-cnv.prod[link].
+
+Once OpenShift cluster is ready, login to console and install these operators from OperatorHub:
+
+* OpenShift Serverless
+* OpenShift Service Mesh
+* Red Hat Authorino(Technical Preview)
+
+Once these operators are installed and in ready state, now install Red Hat OpenShift AI operator using fast Channel and 2.12.0 Version as shown in below image:
+
+image::OpenShiftAI_install.png[width=75%]
+
+As OpenShift AI operator is ready, create a DataScienceCluster using the default values as shown in below image.
+
+image::DataScienceCluster.png[width=75%]
+
+This will be created quickly. Once this is completed, our environment is ready to start the workshop steps.
 
 == Delivering the workshop
 
@@ -19,7 +33,7 @@ Now install OpenShift Pipelines operator using the default values in the fields.
 +
 image::wkshp_1.png[width=100%]
 +
-- Fork “main” branch from this https://github.com/solution-pattern-big-data/deployment[repo].
+- Fork “v2” branch from this https://github.com/solution-pattern-big-data/deployment[repo].
 - Clone the above forked repo into bastion host and cd to this repo and cd to deployment-yaml.
 +
 image::wkshp_2.png[width=100%]
@@ -28,12 +42,28 @@ image::wkshp_2.png[width=100%]
 * Project
 * Secrets required for Minio
 * Minio
-* Pipeline Server
 +
 image::wkshp_3.png[width=100%]
 +
-- This step will take 1 to 2 minutes. Go to project stock-predict in the RHOAI dashboard under “Data Science Projects”. Once you see “Import pipeline” in the “Pipelines” section in the stock-predict project, this step is complete.
-- Now create a workbench with the name “stock-predict-workbench” with following details under the “Workbenches” section. Use the “Standard Data Science” image from the “Image selection” drop down menu and select “Use existing data connection”. From this dropdown menu, select “Minio Connection”.
+- This step will take 1 to 2 minutes. Go to project stock-predict in the RHOAI dashboard under “Data Science Projects”. 
++
+- In stock-predict project, under pipelines click on "configure pipeline server".
++
+image::pipelineserver1.png[width=75%]
++
+image::pipelineserver2.png[width=75%]
++
+- From key icon, select "Pipeline Artifacts" and it will populate the fields. 
++
+image::pipelineserver3.png[width=75%]
++
+image::pipelineserver4.png[width=75%]
++
+- Click on  "configure pipeline server". It will take a minute to deploy the changes.
++
+- Once you see “Import pipeline” in the “Pipelines” section in the stock-predict project, this step is complete.
++
+- Now create a workbench with the name “stock-predict-workbench” with following details under the “Workbenches” section. Use the “Standard Data Science” and "2024.1" version image from the “Image selection” drop down menu and select “Use existing data connection”. From this dropdown menu, select “Minio Connection”.
 +
 image::wkshp_4.png[width=100%]
 image::wkshp_5.png[width=100%]
@@ -85,6 +115,18 @@ image::wkshp_18.png[width=100%]
 - Click on the “Save pipeline” button as shown below.
 +
 image::wkshp_19.png[width=100%]
++
+- Now edit the runtime and update the cloud storage endpoint. Click on the gear icon on the left side bar.
++
+image::runtime.png[width=100%]
++
+- Click on the pencil icon as shown below.
++
+image::runtime2.png[width=100%]
++
+- Update the Cloud Object Storage endpoint using the minio-api route available in OpenShift Console under Routes. Once updated, save & close the runtime configuration.
++
+image::runtime3.png[width=100%]
 +
 - Now run the pipeline by clicking on “Run Pipeline” button.
 +

@@ -161,11 +161,42 @@
 <div class="sect2">
 <h3 id="_installing_the_environment"><a class="anchor" href="#_installing_the_environment"></a><a class="link" href="#_installing_the_environment">1.1. Installing the environment</a></h3>
 <div class="paragraph">
-<p>Note: This demo works well with RHOAI(channel = stable-2.8 and version &#8656; 2.8.4). For newer version of RHOAI, we are working on upgrading this demo.</p>
+<p>Login to <a href="https://demo.redhat.com/catalog" class="bare">https://demo.redhat.com/catalog</a> and provision a CI with OpenShift cluster using this <a href="https://demo.redhat.com/catalog?item=babylon-catalog-prod%2Fopenshift-cnv.ocpmulti-wksp-cnv.prod">link</a>.</p>
 </div>
 <div class="paragraph">
-<p>Login to <a href="https://demo.redhat.com/catalog" class="bare">https://demo.redhat.com/catalog</a> and provision a CI with OpenShift cluster and install OpenShift AI operator(stable-2.8 and version &#8656; 2.8.4), during the operator install create DataScienceCluster with default values.
-Now install OpenShift Pipelines operator using the default values in the fields.</p>
+<p>Once OpenShift cluster is ready, login to console and install these operators from OperatorHub:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OpenShift Serverless</p>
+</li>
+<li>
+<p>OpenShift Service Mesh</p>
+</li>
+<li>
+<p>Red Hat Authorino(Technical Preview)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Once these operators are installed and in ready state, now install Red Hat OpenShift AI operator using fast Channel and 2.12.0 Version as shown in below image:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/OpenShiftAI_install.png" alt="OpenShiftAI install" width="75%">
+</div>
+</div>
+<div class="paragraph">
+<p>As OpenShift AI operator is ready, create a DataScienceCluster using the default values as shown in below image.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/DataScienceCluster.png" alt="DataScienceCluster" width="75%">
+</div>
+</div>
+<div class="paragraph">
+<p>This will be created quickly. Once this is completed, our environment is ready to start the workshop steps.</p>
 </div>
 </div>
 </div>
@@ -184,7 +215,7 @@ Now install OpenShift Pipelines operator using the default values in the fields.
 </div>
 </li>
 <li>
-<p>Fork “main” branch from this <a href="https://github.com/solution-pattern-big-data/deployment">repo</a>.</p>
+<p>Fork “v2” branch from this <a href="https://github.com/solution-pattern-big-data/deployment">repo</a>.</p>
 </li>
 <li>
 <p>Clone the above forked repo into bastion host and cd to this repo and cd to deployment-yaml.</p>
@@ -206,9 +237,6 @@ Now install OpenShift Pipelines operator using the default values in the fields.
 </li>
 <li>
 <p>Minio</p>
-</li>
-<li>
-<p>Pipeline Server</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/wkshp_3.png" alt="wkshp 3" width="100%">
@@ -219,10 +247,42 @@ Now install OpenShift Pipelines operator using the default values in the fields.
 </div>
 </li>
 <li>
-<p>This step will take 1 to 2 minutes. Go to project stock-predict in the RHOAI dashboard under “Data Science Projects”. Once you see “Import pipeline” in the “Pipelines” section in the stock-predict project, this step is complete.</p>
+<p>This step will take 1 to 2 minutes. Go to project stock-predict in the RHOAI dashboard under “Data Science Projects”.</p>
 </li>
 <li>
-<p>Now create a workbench with the name “stock-predict-workbench” with following details under the “Workbenches” section. Use the “Standard Data Science” image from the “Image selection” drop down menu and select “Use existing data connection”. From this dropdown menu, select “Minio Connection”.</p>
+<p>In stock-predict project, under pipelines click on "configure pipeline server".</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pipelineserver1.png" alt="pipelineserver1" width="75%">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pipelineserver2.png" alt="pipelineserver2" width="75%">
+</div>
+</div>
+</li>
+<li>
+<p>From key icon, select "Pipeline Artifacts" and it will populate the fields.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pipelineserver3.png" alt="pipelineserver3" width="75%">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/pipelineserver4.png" alt="pipelineserver4" width="75%">
+</div>
+</div>
+</li>
+<li>
+<p>Click on  "configure pipeline server". It will take a minute to deploy the changes.</p>
+</li>
+<li>
+<p>Once you see “Import pipeline” in the “Pipelines” section in the stock-predict project, this step is complete.</p>
+</li>
+<li>
+<p>Now create a workbench with the name “stock-predict-workbench” with following details under the “Workbenches” section. Use the “Standard Data Science” and "2024.1" version image from the “Image selection” drop down menu and select “Use existing data connection”. From this dropdown menu, select “Minio Connection”.</p>
 <div class="imageblock">
 <div class="content">
 <img src="_images/wkshp_4.png" alt="wkshp 4" width="100%">
@@ -337,6 +397,30 @@ Now install OpenShift Pipelines operator using the default values in the fields.
 <div class="imageblock">
 <div class="content">
 <img src="_images/wkshp_19.png" alt="wkshp 19" width="100%">
+</div>
+</div>
+</li>
+<li>
+<p>Now edit the runtime and update the cloud storage endpoint. Click on the gear icon on the left side bar.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/runtime.png" alt="runtime" width="100%">
+</div>
+</div>
+</li>
+<li>
+<p>Click on the pencil icon as shown below.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/runtime2.png" alt="runtime2" width="100%">
+</div>
+</div>
+</li>
+<li>
+<p>Update the Cloud Object Storage endpoint using the minio-api route available in OpenShift Console under Routes. Once updated, save &amp; close the runtime configuration.</p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/runtime3.png" alt="runtime3" width="100%">
 </div>
 </div>
 </li>
